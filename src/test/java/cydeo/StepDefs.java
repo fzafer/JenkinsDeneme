@@ -66,15 +66,5 @@ public class StepDefs {
         }
         Driver.closeDriver();
     }
-    @Given("user is on Google search page")
-    public void user_is_on_google_search_page() {
-        Driver.getDriver().get("https://www.google.com/");
-    }
 
-
-    @Then("user sees the google title")
-    public void user_sees_the_google_title() {
-        Assert.assertEquals("Google", Driver.getDriver().getTitle());
-
-    }
 }
