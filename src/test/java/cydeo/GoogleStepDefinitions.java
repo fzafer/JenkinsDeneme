@@ -60,7 +60,7 @@ public class GoogleStepDefinitions {
 
     }
 
-    @Then("user should see title is Google")
+    @Then("user sees the google title")
     public void user_should_see_title_is_google() {
         String expectedTitle = "Google";
         String actualTitle = Driver.getDriver().getTitle();
