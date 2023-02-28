@@ -23,7 +23,25 @@ public class StepDefs {
         Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().get("http://etsy.com");
-
+/*
+        String environment = System.getProperty("environment");
+        if (environment != null) {
+            switch (environment) {
+                case "qa":
+                    Driver.getDriver().get("http://qa1.vytrack.com");
+                    break;
+                case "dev":
+                    Driver.getDriver().get("http://dev.vytrack.com");
+                    break;
+                case "stage":
+                    Driver.getDriver().get("http://stage.vytrack.com");
+                    break;
+            }
+        } else {
+            String url = ConfigurationReader.getProperty("environment");
+            Driver.getDriver().get(url);
+        }
+*/
     }
 
     @When("^I search for \"([^\"]*)\"$")
