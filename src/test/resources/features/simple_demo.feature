@@ -19,6 +19,6 @@ Feature: The application should be running
 
   @smoke
   Scenario: Search functionality result title verification
-    Given user is on Google search page
+    Given user is on Google page
     When user types "apple" and clicks enter
     Then user sees "apple" in the google title
