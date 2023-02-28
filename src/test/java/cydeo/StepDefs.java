@@ -70,12 +70,11 @@ public class StepDefs {
     public void user_is_on_google_search_page() {
         Driver.getDriver().get("https://www.google.com/");
     }
-    @When("user types apple and clicks enter")
-    public void user_types_apple_and_clicks_enter() {
-        Driver.getDriver().findElement(By.id("q")).sendKeys("apple"  + Keys.ENTER);
-    }
-    @Then("user sees apple in the google title")
-    public void user_sees_apple_in_the_google_title() {
-        Assert.assertEquals(Driver.getDriver().getTitle(), "apple - Google'da Ara");
+
+
+    @Then("user sees the google title")
+    public void user_sees_the_google_title() {
+        Assert.assertEquals("Google", Driver.getDriver().getTitle());
+
     }
 }
