@@ -12,7 +12,7 @@ Feature: The application should be running
     When I search for "useless box"
     Then I should see more results
 
-
+  @smoke
   Scenario: Search functionality result title verification
     Given user is on Google search page
     When user types apple and clicks enter
